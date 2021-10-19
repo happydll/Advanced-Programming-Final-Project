@@ -1,0 +1,38 @@
+using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+
+namespace WindowsFormsApp1
+{
+    public partial class frmSatrançTahtasıHakkında : Form
+    {
+        public frmSatrançTahtasıHakkında()
+        {
+            InitializeComponent();
+        }
+
+        private void cmdGeri4_Click(object sender, EventArgs e)
+        {
+            {
+                frmÖğren frmÖğren = new frmÖğren();
+                frmÖğren.Show();
+                this.Hide(); // cmdGeri4 butonuna tıklandığında frmÖğren sayfaını açan kod.
+
+                System.Media.SoundPlayer ses = new System.Media.SoundPlayer();
+                ses.SoundLocation = "ses.wav";
+                ses.Play(); //burada butona tıklandığında ses dosyasını oynatır.
+            }
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+    }
+}

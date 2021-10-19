@@ -1,0 +1,131 @@
+using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+
+namespace WindowsFormsApp1
+{
+    public partial class frmTaşlar : Form
+    {
+        public frmTaşlar()
+        {
+            InitializeComponent();
+        }
+
+        private void Piyon_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void picPiyon_Click(object sender, EventArgs e)
+        {
+            {
+                frmPiyon frmPiyon = new frmPiyon();
+                frmPiyon.Show();
+                this.Hide(); // picPiyon resmine tıklandığında frmPiyon sayfaını açan kod.
+
+                System.Media.SoundPlayer ses = new System.Media.SoundPlayer();
+                ses.SoundLocation = "ses.wav";
+                ses.Play(); //burada butona tıklandığında ses dosyasını oynatır.
+            }
+        }
+
+        private void cmdGeri5_Click(object sender, EventArgs e)
+        {
+            {
+                frmÖğren frmÖğren = new frmÖğren();
+                frmÖğren.Show();
+                this.Hide(); // cmdGeri5 butonuna tıklandığında frmÖğren sayfaını açan kod.
+
+                System.Media.SoundPlayer ses = new System.Media.SoundPlayer();
+                ses.SoundLocation = "ses.wav";
+                ses.Play(); //burada butona tıklandığında ses dosyasını oynatır.
+            }
+        }
+
+        private void picKale_Click(object sender, EventArgs e)
+        {
+            {
+                frmKale frmKale = new frmKale();
+                frmKale.Show();
+                this.Hide(); // picKale resmine tıklandığında frmKale sayfaını açan kod.
+
+                System.Media.SoundPlayer ses = new System.Media.SoundPlayer();
+                ses.SoundLocation = "ses.wav";
+                ses.Play(); //burada butona tıklandığında ses dosyasını oynatır.
+            }
+        }
+
+        private void picAt_Click(object sender, EventArgs e)
+        {
+            {
+                frmAt frmAt = new frmAt();
+                frmAt.Show();
+                this.Hide(); // picAt resmine tıklandığında frmAt sayfaını açan kod.
+
+                System.Media.SoundPlayer ses = new System.Media.SoundPlayer();
+                ses.SoundLocation = "ses.wav";
+                ses.Play(); //burada butona tıklandığında ses dosyasını oynatır.
+            }
+        }
+
+        private void picFil_Click(object sender, EventArgs e)
+        {
+            {
+                frmFil frmFil = new frmFil();
+                frmFil.Show();
+                this.Hide(); // picFil resmine tıklandığında frmfil sayfaını açan kod.
+
+                System.Media.SoundPlayer ses = new System.Media.SoundPlayer();
+                ses.SoundLocation = "ses.wav";
+                ses.Play(); //burada butona tıklandığında ses dosyasını oynatır.
+            }
+        }
+
+        private void picVezir_Click(object sender, EventArgs e)
+        {
+            {
+                frmVezir frmVezir = new frmVezir();
+                frmVezir.Show();
+                this.Hide(); // picVezir resmine tıklandığında frmVezir sayfaını açan kod.
+
+                System.Media.SoundPlayer ses = new System.Media.SoundPlayer();
+                ses.SoundLocation = "ses.wav";
+                ses.Play(); //burada butona tıklandığında ses dosyasını oynatır.
+            }
+        }
+
+        private void picSah_Click(object sender, EventArgs e)
+        {
+            {
+                frmŞah frmŞah = new frmŞah();
+                frmŞah.Show();
+                this.Hide(); // picŞah resmine tıklandığında frmŞah sayfaını açan kod.
+
+                System.Media.SoundPlayer ses = new System.Media.SoundPlayer();
+                ses.SoundLocation = "ses.wav";
+                ses.Play(); //burada butona tıklandığında ses dosyasını oynatır.
+            }
+        }
+
+        private void frmTaşlar_Load(object sender, EventArgs e)
+        {
+
+        }
+    }
+}

@@ -1,0 +1,229 @@
+using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+
+namespace WindowsFormsApp1
+{
+    public partial class frmKaleHareketi : Form
+    {
+        public frmKaleHareketi()
+        {
+            InitializeComponent();
+        }
+
+        private void cmdTaşlar4_Click(object sender, EventArgs e)
+        {
+            
+            frmTaşlar frmTaşlar = new frmTaşlar();
+            frmTaşlar.Show();
+            this.Hide(); //cmdTaşlar4 butonuna tıklandığında frmTaşlar sayfasını açan kod.
+
+            System.Media.SoundPlayer ses = new System.Media.SoundPlayer();
+            ses.SoundLocation = "ses.wav";
+            ses.Play(); //burada butona tıklandığında ses dosyasını oynatır.
+
+        }
+
+        private void cmdGeri7_Click(object sender, EventArgs e)
+        {
+            
+            frmKale frmKale = new frmKale();
+            frmKale.Show();
+            this.Hide(); //cmdGeri7 butonuna tıklandığında frmKale sayfasını açan kod.
+
+            System.Media.SoundPlayer ses = new System.Media.SoundPlayer();
+            ses.SoundLocation = "ses.wav";
+            ses.Play(); //burada butona tıklandığında ses dosyasını oynatır.
+
+        }
+
+        
+            private void frmKaleHareketi_Load(object sender, EventArgs e)
+            {
+                RENK(); //renk fonkisyonunu çağırdım.
+
+                timer1.Start();// oluşturduğum timerı başlattım
+
+            }
+            int sayac = 0; //sayac adında değişken tanımladım ve 0 değeri atadım
+
+        
+
+           private void RENK() //Renk fonksiyonu
+            {
+            A1.BackColor = Color.CadetBlue;
+            A2.BackColor = Color.AliceBlue;
+            A3.BackColor = Color.CadetBlue;
+            A4.BackColor = Color.AliceBlue;
+            A5.BackColor = Color.CadetBlue;
+            A6.BackColor = Color.AliceBlue;
+            A7.BackColor = Color.CadetBlue;
+            A8.BackColor = Color.AliceBlue;
+            B1.BackColor = Color.AliceBlue;
+            B2.BackColor = Color.CadetBlue;
+            B3.BackColor = Color.AliceBlue;
+            B4.BackColor = Color.CadetBlue;
+            B5.BackColor = Color.AliceBlue;
+            B6.BackColor = Color.CadetBlue;
+            B7.BackColor = Color.AliceBlue;
+            B8.BackColor = Color.CadetBlue;
+            C1.BackColor = Color.CadetBlue;
+            C2.BackColor = Color.AliceBlue;
+            C3.BackColor = Color.CadetBlue;
+            C4.BackColor = Color.AliceBlue;
+            C5.BackColor = Color.CadetBlue;
+            C6.BackColor = Color.AliceBlue;
+            C7.BackColor = Color.CadetBlue;
+            C8.BackColor = Color.AliceBlue;
+            D1.BackColor = Color.AliceBlue;
+            D2.BackColor = Color.CadetBlue;
+            D3.BackColor = Color.AliceBlue;
+            D4.BackColor = Color.CadetBlue;
+            D5.BackColor = Color.AliceBlue;
+            D6.BackColor = Color.CadetBlue;
+            D7.BackColor = Color.AliceBlue;
+            D8.BackColor = Color.CadetBlue;
+            E1.BackColor = Color.CadetBlue;
+            E2.BackColor = Color.AliceBlue;
+            E3.BackColor = Color.CadetBlue;
+            E4.BackColor = Color.AliceBlue;
+            E5.BackColor = Color.CadetBlue;
+            E6.BackColor = Color.AliceBlue;
+            E7.BackColor = Color.CadetBlue;
+            E8.BackColor = Color.AliceBlue;
+            F1.BackColor = Color.AliceBlue;
+            F2.BackColor = Color.CadetBlue;
+            F3.BackColor = Color.AliceBlue;
+            F4.BackColor = Color.CadetBlue;
+            F5.BackColor = Color.AliceBlue;
+            F6.BackColor = Color.CadetBlue;
+            F7.BackColor = Color.AliceBlue;
+            F8.BackColor = Color.CadetBlue;
+            G1.BackColor = Color.CadetBlue;
+            G2.BackColor = Color.AliceBlue;
+            G3.BackColor = Color.CadetBlue;
+            G4.BackColor = Color.AliceBlue;
+            G5.BackColor = Color.CadetBlue;
+            G6.BackColor = Color.AliceBlue;
+            G7.BackColor = Color.CadetBlue;
+            G8.BackColor = Color.AliceBlue;
+            H1.BackColor = Color.AliceBlue;
+            H2.BackColor = Color.CadetBlue;
+            H3.BackColor = Color.AliceBlue;
+            H4.BackColor = Color.CadetBlue;
+            H5.BackColor = Color.AliceBlue;
+            H6.BackColor = Color.CadetBlue;
+            H7.BackColor = Color.AliceBlue;
+            H8.BackColor = Color.CadetBlue;
+
+        }
+
+        private void timer1_Tick_1(object sender, EventArgs e)
+        {
+            sayac++; // sayac birer birer artar.
+            if (sayac == 5) // sayac 5'e eşit olduğunda aşağıdaki işlemler yapılacak
+            {
+
+
+                B2.Image = pictureBox1.Image;
+
+
+            }
+            else if (sayac == 10)// sayac 10'e eşit olduğunda aşağıdaki işlemler yapılacak
+            {
+                C2.BackColor = Color.Yellow;
+                D2.BackColor = Color.Yellow;
+                E2.BackColor = Color.Yellow;
+                F2.BackColor = Color.Yellow;
+                G2.BackColor = Color.Yellow;
+                H2.BackColor = Color.Yellow;
+                A2.BackColor = Color.Yellow;
+                B1.BackColor = Color.Yellow;
+                B3.BackColor = Color.Yellow;
+                B4.BackColor = Color.Yellow;
+                B5.BackColor = Color.Yellow;
+                B6.BackColor = Color.Yellow;
+                B7.BackColor = Color.Yellow;
+                B8.BackColor = Color.Yellow;
+
+            }
+            else if (sayac == 20)// sayac 20'e eşit olduğunda aşağıdaki işlemler yapılacak
+            {
+                B2.Image = null;
+
+
+                F2.Image = pictureBox1.Image;
+                RENK();
+
+
+            }
+            else if (sayac == 25)// sayac 25'e eşit olduğunda aşağıdaki işlemler yapılacak
+            {
+
+                C2.BackColor = Color.Yellow;
+                D2.BackColor = Color.Yellow;
+                E2.BackColor = Color.Yellow;
+                B2.BackColor = Color.Yellow;
+                G2.BackColor = Color.Yellow;
+                H2.BackColor = Color.Yellow;
+                A2.BackColor = Color.Yellow;
+                F1.BackColor = Color.Yellow;
+                F3.BackColor = Color.Yellow;
+                F4.BackColor = Color.Yellow;
+                F5.BackColor = Color.Yellow;
+                F6.BackColor = Color.Yellow;
+                F7.BackColor = Color.Yellow;
+                F8.BackColor = Color.Yellow;
+
+            }
+            else if (sayac == 30)// sayac 30'e eşit olduğunda aşağıdaki işlemler yapılacak
+            {
+
+                F2.Image = null;
+
+                F8.Image = pictureBox1.Image;
+                RENK();
+
+
+            }
+            else if (sayac == 40)// sayac 40'e eşit olduğunda aşağıdaki işlemler yapılacak
+            {
+                F8.Image = null;
+                C1.Image = pictureBox1.Image;
+                F1.Image = pictureBox2.Image;
+                C6.Image = pictureBox1.Image;
+            }
+            else if (sayac == 50)// sayac 50'e eşit olduğunda aşağıdaki işlemler yapılacak
+            {
+                C2.BackColor = Color.Yellow;
+                C3.BackColor = Color.Yellow;
+                C4.BackColor = Color.Yellow;
+                C5.BackColor = Color.Yellow;
+                B1.BackColor = Color.Yellow;
+                A1.BackColor = Color.Yellow;
+                D1.BackColor = Color.Yellow;
+                E1.BackColor = Color.Yellow;
+
+
+            }
+            else if (sayac == 60)// sayac 60'e eşit olduğunda aşağıdaki işlemler yapılacak
+            {
+                C1.Image = null;
+                F1.Image = null;
+                F1.Image = pictureBox1.Image;
+                RENK();
+            }
+            else if (sayac == 100)// sayac 100'e eşit olduğunda aşağıdaki işlemler yapılacak
+            {
+                timer1.Stop();//timer 1 durdu.
+            }
+        }
+    }
+ }
+

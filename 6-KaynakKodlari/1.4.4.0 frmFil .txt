@@ -1,0 +1,46 @@
+using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+
+namespace WindowsFormsApp1
+{
+    public partial class frmFil : Form
+    {
+        public frmFil()
+        {
+            InitializeComponent();
+        }
+
+        private void cmdTaşlar7_Click(object sender, EventArgs e)
+        {
+            {
+                frmTaşlar frmTaşlar = new frmTaşlar();
+                frmTaşlar.Show();
+                this.Hide(); //cmdTaşlar7 butonuna tıklandığında frmTaşlar sayfaını açan kod.
+
+                System.Media.SoundPlayer ses = new System.Media.SoundPlayer();
+                ses.SoundLocation = "ses.wav";
+                ses.Play(); //burada butona tıklandığında ses dosyasını oynatır.
+            }
+        }
+
+        private void cmdFilHareketi_Click(object sender, EventArgs e)
+        {
+            {
+                frmFilHareketi frmFilHareketi = new frmFilHareketi();
+                frmFilHareketi.Show();
+                this.Hide(); //cmdFilHareketi butonuna tıklandığında frmFilHareketi sayfaını açan kod.
+
+                System.Media.SoundPlayer ses = new System.Media.SoundPlayer();
+                ses.SoundLocation = "ses.wav";
+                ses.Play(); //burada butona tıklandığında ses dosyasını oynatır.
+            }
+        }
+    }
+}

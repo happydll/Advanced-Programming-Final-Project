@@ -1,0 +1,31 @@
+using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+
+namespace WindowsFormsApp1
+{
+    public partial class frmNeslihanYücel : Form
+    {
+        public frmNeslihanYücel()
+        {
+            InitializeComponent();
+        }
+
+        private void cmdGeri15_Click(object sender, EventArgs e)
+        {
+            frmHakkımızda frmHakkımızda = new frmHakkımızda();
+            frmHakkımızda.Show();
+            this.Hide(); // cmdGeri15 butonuna tıklandığı zaman frmHakkımızda sayfasını açan kod.
+
+            System.Media.SoundPlayer ses = new System.Media.SoundPlayer();
+            ses.SoundLocation = "ses.wav";
+            ses.Play(); //burada butona tıklandığında ses dosyasını oynatır.
+        }
+    }
+}

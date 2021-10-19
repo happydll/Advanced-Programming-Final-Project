@@ -1,0 +1,73 @@
+using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+using System.Media;
+
+namespace WindowsFormsApp1
+{
+    public partial class frmAnasayfa : Form
+    {
+        public frmAnasayfa()
+        {
+            InitializeComponent();
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+               
+        private void button2_Click(object sender, EventArgs e)
+        {
+            {
+                frmÖğren frmÖğren = new frmÖğren();
+                frmÖğren.Show();
+                this.Hide(); // Buton2'ye tıklandığında frmÖğren sayfaını açan kod.
+
+                System.Media.SoundPlayer ses = new System.Media.SoundPlayer();
+                ses.SoundLocation = "ses.wav";
+                ses.Play(); //burada butona tıklandığında ses dosyasını oynatır.
+
+            }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            string yol = Application.StartupPath + @"\Resources\Program.exe";
+            System.Diagnostics.Process.Start(yol); // Burada Kaynaklar kısımnıdan program.exe yi çağırdım. Buton1'e tıklanıldığında program.exe çalışacak.
+
+            System.Media.SoundPlayer ses = new System.Media.SoundPlayer();
+            ses.SoundLocation = "ses.wav";
+            ses.Play(); //burada butona tıklandığında ses dosyasını oynatır.
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            {
+                frmHakkımızda frmHakkımızda = new frmHakkımızda();
+                frmHakkımızda.Show();
+                this.Hide(); // Buton3'e tıklandığında frmHakkımzda sayfaını açan kod.
+
+                System.Media.SoundPlayer ses = new System.Media.SoundPlayer();
+                ses.SoundLocation = "ses.wav";
+                ses.Play(); //burada butona tıklandığında ses dosyasını oynatır.
+            }
+        }
+
+        private void frmAnasayfa_Load(object sender, EventArgs e)
+        {
+
+        }
+    }
+}

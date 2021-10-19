@@ -1,0 +1,109 @@
+using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+
+namespace WindowsFormsApp1
+{
+    public partial class frmHakkımızda : Form
+    {
+        public frmHakkımızda()
+        {
+            InitializeComponent();
+        }
+
+        private void cmdGeri12_Click(object sender, EventArgs e)
+        {
+            {
+                frmAnasayfa frmAnasayfa = new frmAnasayfa();
+                frmAnasayfa.Show();
+                this.Hide(); //cmdGeri butonuna tıklandığında frmAnasayfa sayfaını açan kod.
+
+                System.Media.SoundPlayer ses = new System.Media.SoundPlayer();
+                ses.SoundLocation = "ses.wav";
+                ses.Play(); //burada butona tıklandığında ses dosyasını oynatır.
+            }
+        }
+
+        private void lbl_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void picIbrahimYasinInan_Click(object sender, EventArgs e)
+        {
+            frmIbrahimYasinInan frmIbrahimYasinInan = new frmIbrahimYasinInan();
+            frmIbrahimYasinInan.Show();
+            this.Hide(); // picIbrahimYasinInan resmine tıklandığında frmIbrahimYasinInan sayfaını açan kod.
+
+            System.Media.SoundPlayer ses = new System.Media.SoundPlayer();
+            ses.SoundLocation = "ses.wav";
+            ses.Play(); //burada butona tıklandığında ses dosyasını oynatır.
+        }
+
+        private void picEminBayram_Click(object sender, EventArgs e)
+        {
+            frmEminBayram frmEminBayram = new frmEminBayram();
+            frmEminBayram.Show();
+            this.Hide();  // picEminBayram resmine tıklandığında frmEminBayram sayfaını açan kod.
+
+            System.Media.SoundPlayer ses = new System.Media.SoundPlayer();
+            ses.SoundLocation = "ses.wav";
+            ses.Play(); //burada butona tıklandığında ses dosyasını oynatır.
+        }
+
+        private void picMesutTanerCetin_Click(object sender, EventArgs e)
+        {
+            frmMesutTanerCetin frmMesutTanerCetin = new frmMesutTanerCetin();
+            frmMesutTanerCetin.Show();
+            this.Hide(); // picMesutTanerCetin resmine tıklandığında frmpicMesutTanerCetin sayfaını açan kod.
+
+            System.Media.SoundPlayer ses = new System.Media.SoundPlayer();
+            ses.SoundLocation = "ses.wav";
+            ses.Play(); //burada butona tıklandığında ses dosyasını oynatır.
+        }
+
+        private void picNeslihanYücel_Click(object sender, EventArgs e)
+        {
+            frmNeslihanYücel frmNeslihanYücel = new frmNeslihanYücel();
+            frmNeslihanYücel.Show();
+            this.Hide(); // picNeslihanYücel resmine tıklandığında frmNeslihanYücel sayfaını açan kod.
+
+            System.Media.SoundPlayer ses = new System.Media.SoundPlayer();
+            ses.SoundLocation = "ses.wav";
+            ses.Play(); //burada butona tıklandığında ses dosyasını oynatır.
+        }
+
+        private void picFatmaYaman_Click(object sender, EventArgs e)
+        {
+            frmFatmaYaman frmFatmaYaman = new frmFatmaYaman();
+            frmFatmaYaman.Show();
+            this.Hide(); // picFatmaYaman resmine tıklandığında frmFatmaYaman sayfaını açan kod.
+
+            System.Media.SoundPlayer ses = new System.Media.SoundPlayer();
+            ses.SoundLocation = "ses.wav";
+            ses.Play(); //burada butona tıklandığında ses dosyasını oynatır.
+        }
+
+        private void picRabiaNurKarakus_Click(object sender, EventArgs e)
+        {
+            frmRabiaNurKarakus frmRabiaNurKarakus = new frmRabiaNurKarakus();
+            frmRabiaNurKarakus.Show();
+            this.Hide(); // picRabiaNurKarakus resmine tıklandığında frmRabiaNurKarakus sayfaını açan kod.
+
+            System.Media.SoundPlayer ses = new System.Media.SoundPlayer();
+            ses.SoundLocation = "ses.wav";
+            ses.Play(); //burada butona tıklandığında ses dosyasını oynatır.
+        }
+    }
+}

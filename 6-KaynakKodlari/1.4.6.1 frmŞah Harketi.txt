@@ -1,0 +1,183 @@
+using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+
+namespace WindowsFormsApp1
+{
+    public partial class frmŞahHareketi : Form
+    {
+        public frmŞahHareketi()
+        {
+            InitializeComponent();
+        }
+
+        private void cmdTaşlar12_Click(object sender, EventArgs e)
+        {
+            {
+                frmTaşlar frmTaşlar = new frmTaşlar();
+                frmTaşlar.Show();
+                this.Hide(); //cmdTaşlar12 butonuna tıklandığında frmTaşlar sayfaını açan kod.
+
+                System.Media.SoundPlayer ses = new System.Media.SoundPlayer();
+                ses.SoundLocation = "ses.wav";
+                ses.Play(); //burada butona tıklandığında ses dosyasını oynatır.
+            }
+        }
+
+        private void cmdGeri11_Click(object sender, EventArgs e)
+        {
+            {
+                frmŞah frmŞah = new frmŞah();
+                frmŞah.Show();
+                this.Hide(); //cmdGeri11 butonuna tıklandığında frmŞah sayfaını açan kod.
+
+                System.Media.SoundPlayer ses = new System.Media.SoundPlayer();
+                ses.SoundLocation = "ses.wav";
+                ses.Play(); //burada butona tıklandığında ses dosyasını oynatır.
+            }
+        }
+
+        private void frmŞahHareketi_Load(object sender, EventArgs e)
+        {
+            RENK();// Renk fonksiyonu çağır
+            timer1.Start();//timer başlat
+        }
+        int sayac=0;// sayac değişkeni tanımla ve 0 değerini ata.
+        private void RENK() // renk fonksiyonu
+        {
+            A1.BackColor = Color.CadetBlue;
+            A2.BackColor = Color.AliceBlue;
+            A3.BackColor = Color.CadetBlue;
+            A4.BackColor = Color.AliceBlue;
+            A5.BackColor = Color.CadetBlue;
+            A6.BackColor = Color.AliceBlue;
+            A7.BackColor = Color.CadetBlue;
+            A8.BackColor = Color.AliceBlue;
+            B1.BackColor = Color.AliceBlue;
+            B2.BackColor = Color.CadetBlue;
+            B3.BackColor = Color.AliceBlue;
+            B4.BackColor = Color.CadetBlue;
+            B5.BackColor = Color.AliceBlue;
+            B6.BackColor = Color.CadetBlue;
+            B7.BackColor = Color.AliceBlue;
+            B8.BackColor = Color.CadetBlue;
+            C1.BackColor = Color.CadetBlue;
+            C2.BackColor = Color.AliceBlue;
+            C3.BackColor = Color.CadetBlue;
+            C4.BackColor = Color.AliceBlue;
+            C5.BackColor = Color.CadetBlue;
+            C6.BackColor = Color.AliceBlue;
+            C7.BackColor = Color.CadetBlue;
+            C8.BackColor = Color.AliceBlue;
+            D1.BackColor = Color.AliceBlue;
+            D2.BackColor = Color.CadetBlue;
+            D3.BackColor = Color.AliceBlue;
+            D4.BackColor = Color.CadetBlue;
+            D5.BackColor = Color.AliceBlue;
+            D6.BackColor = Color.CadetBlue;
+            D7.BackColor = Color.AliceBlue;
+            D8.BackColor = Color.CadetBlue;
+            E1.BackColor = Color.CadetBlue;
+            E2.BackColor = Color.AliceBlue;
+            E3.BackColor = Color.CadetBlue;
+            E4.BackColor = Color.AliceBlue;
+            E5.BackColor = Color.CadetBlue;
+            E6.BackColor = Color.AliceBlue;
+            E7.BackColor = Color.CadetBlue;
+            E8.BackColor = Color.AliceBlue;
+            F1.BackColor = Color.AliceBlue;
+            F2.BackColor = Color.CadetBlue;
+            F3.BackColor = Color.AliceBlue;
+            F4.BackColor = Color.CadetBlue;
+            F5.BackColor = Color.AliceBlue;
+            F6.BackColor = Color.CadetBlue;
+            F7.BackColor = Color.AliceBlue;
+            F8.BackColor = Color.CadetBlue;
+            G1.BackColor = Color.CadetBlue;
+            G2.BackColor = Color.AliceBlue;
+            G3.BackColor = Color.CadetBlue;
+            G4.BackColor = Color.AliceBlue;
+            G5.BackColor = Color.CadetBlue;
+            G6.BackColor = Color.AliceBlue;
+            G7.BackColor = Color.CadetBlue;
+            G8.BackColor = Color.AliceBlue;
+            H1.BackColor = Color.AliceBlue;
+            H2.BackColor = Color.CadetBlue;
+            H3.BackColor = Color.AliceBlue;
+            H4.BackColor = Color.CadetBlue;
+            H5.BackColor = Color.AliceBlue;
+            H6.BackColor = Color.CadetBlue;
+            H7.BackColor = Color.AliceBlue;
+            H8.BackColor = Color.CadetBlue;
+
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            sayac++; // sayacı 1 arttır.
+            if (sayac == 5)// sayac 5'e eşit olduğunda aşağıdaki işlemler yapılacak
+            {
+                D1.Image = pictureBox1.Image;
+            }
+            else if (sayac == 10)// sayac 10'e eşit olduğunda aşağıdaki işlemler yapılacak
+            {
+                D2.BackColor = Color.Yellow;
+                E2.BackColor = Color.Yellow;
+                C2.BackColor = Color.Yellow;
+                C1.BackColor = Color.Yellow;
+                E1.BackColor = Color.Yellow;
+
+            }
+            else if (sayac == 25)// sayac 25'e eşit olduğunda aşağıdaki işlemler yapılacak
+            {
+                D1.Image = null;
+                RENK();
+                D2.Image = pictureBox1.Image;
+
+            }
+
+            else if (sayac == 36)// sayac 36'e eşit olduğunda aşağıdaki işlemler yapılacak
+            {
+                RENK();
+                D2.Image = null;
+            }
+            else if (sayac == 40)// sayac 40'e eşit olduğunda aşağıdaki işlemler yapılacak
+            {
+                D4.Image = pictureBox1.Image;
+            }
+
+            else if (sayac == 50)// sayac 50'e eşit olduğunda aşağıdaki işlemler yapılacak
+            {
+                D3.BackColor = Color.Yellow;
+                D5.BackColor = Color.Yellow;
+                E3.BackColor = Color.Yellow;
+                E4.BackColor = Color.Yellow;
+                E5.BackColor = Color.Yellow;
+                C3.BackColor = Color.Yellow;
+                C4.BackColor = Color.Yellow;
+                C5.BackColor = Color.Yellow;
+
+            }
+            else if (sayac == 67)// sayac 67'e eşit olduğunda aşağıdaki işlemler yapılacak
+            {
+                D4.Image = null;
+                RENK();
+                E5.Image = pictureBox1.Image;
+            }
+
+            else if (sayac == 100)// sayac 100'e eşit olduğunda aşağıdaki işlemler yapılacak
+            {
+                timer1.Stop();//timer durdur.
+                RENK();
+                E5.Image = null;
+            }
+
+        }
+    }
+}

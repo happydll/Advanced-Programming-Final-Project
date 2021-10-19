@@ -1,0 +1,182 @@
+using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+
+namespace WindowsFormsApp1
+{
+    public partial class frmAtHareketi : Form
+    {
+        public frmAtHareketi()
+        {
+            InitializeComponent();
+        }
+
+        private void cmdTaşlar6_Click(object sender, EventArgs e)
+        {
+            {
+                frmTaşlar frmTaşlar = new frmTaşlar();
+                frmTaşlar.Show();
+                this.Hide(); //cmdTaşlar6 butonuna tıklandığında frmTaşlar sayfaını açan kod.
+
+                System.Media.SoundPlayer ses = new System.Media.SoundPlayer();
+                ses.SoundLocation = "ses.wav";
+                ses.Play(); //burada butona tıklandığında ses dosyasını oynatır.
+            }
+        }
+
+        private void cmdGeri8_Click(object sender, EventArgs e)
+        {
+            frmAt frmAt = new frmAt();
+            frmAt.Show();
+            this.Hide(); //cmdGeri8 butonuna tıklandığında frmAT sayfaını açan kod.
+
+            System.Media.SoundPlayer ses = new System.Media.SoundPlayer();
+            ses.SoundLocation = "ses.wav";
+            ses.Play(); //burada butona tıklandığında ses dosyasını oynatır.
+        }
+
+        private void frmAtHareketi_Load(object sender, EventArgs e)
+        {
+            RENK(); // Renk fonksiyonu çağırdım.
+
+            timer1.Start();// Timer başlattım
+        }
+        int sayac = 0; // tam sayı türünde sayac adında bir değişken tanımladım ve 0 değeri atadım.
+        private void RENK() // renk fonksiyonu
+        {
+            A1.BackColor = Color.Black;
+            A2.BackColor = Color.White;
+            A3.BackColor = Color.Black;
+            A4.BackColor = Color.White;
+            A5.BackColor = Color.Black;
+            A6.BackColor = Color.White;
+            A7.BackColor = Color.Black;
+            A8.BackColor = Color.White;
+            B1.BackColor = Color.White;
+            B2.BackColor = Color.Black;
+            B3.BackColor = Color.White;
+            B4.BackColor = Color.Black;
+            B5.BackColor = Color.White;
+            B6.BackColor = Color.Black;
+            B7.BackColor = Color.White;
+            B8.BackColor = Color.Black;
+            C1.BackColor = Color.Black;
+            C2.BackColor = Color.White;
+            C3.BackColor = Color.Black;
+            C4.BackColor = Color.White;
+            C5.BackColor = Color.Black;
+            C6.BackColor = Color.White;
+            C7.BackColor = Color.Black;
+            C8.BackColor = Color.White;
+            D1.BackColor = Color.White;
+            D2.BackColor = Color.Black;
+            D3.BackColor = Color.White;
+            D4.BackColor = Color.Black;
+            D5.BackColor = Color.White;
+            D6.BackColor = Color.Black;
+            D7.BackColor = Color.White;
+            D8.BackColor = Color.Black;
+            E1.BackColor = Color.Black;
+            E2.BackColor = Color.White;
+            E3.BackColor = Color.Black;
+            E4.BackColor = Color.White;
+            E5.BackColor = Color.Black;
+            E6.BackColor = Color.White;
+            E7.BackColor = Color.Black;
+            E8.BackColor = Color.White;
+            F1.BackColor = Color.White;
+            F2.BackColor = Color.Black;
+            F3.BackColor = Color.White;
+            F4.BackColor = Color.Black;
+            F5.BackColor = Color.White;
+            F6.BackColor = Color.Black;
+            F7.BackColor = Color.White;
+            F8.BackColor = Color.Black;
+            G1.BackColor = Color.Black;
+            G2.BackColor = Color.White;
+            G3.BackColor = Color.Black;
+            G4.BackColor = Color.White;
+            G5.BackColor = Color.Black;
+            G6.BackColor = Color.White;
+            G7.BackColor = Color.Black;
+            G8.BackColor = Color.White;
+            H1.BackColor = Color.White;
+            H2.BackColor = Color.Black;
+            H3.BackColor = Color.White;
+            H4.BackColor = Color.Black;
+            H5.BackColor = Color.White;
+            H6.BackColor = Color.Black;
+            H7.BackColor = Color.White;
+            H8.BackColor = Color.Black;
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            sayac++;// sayac birer birer artar
+            if (sayac == 5)// sayac 5'e eşit olduğunda aşağıdaki işlemler yapılacak
+            {
+                D5.Image = pictureBox1.Image;
+            }
+
+            else if (sayac == 12)// sayac 12'e eşit olduğunda aşağıdaki işlemler yapılacak
+            {
+                E7.BackColor = Color.Yellow;
+                C7.BackColor = Color.Yellow;
+                F4.BackColor = Color.Yellow;
+                E3.BackColor = Color.Yellow;
+                C3.BackColor = Color.Yellow;
+                B4.BackColor = Color.Yellow;
+                B6.BackColor = Color.Yellow;
+                F6.BackColor = Color.Yellow;
+
+
+            }
+
+            else if (sayac == 40)// sayac 40'e eşit olduğunda aşağıdaki işlemler yapılacak
+            {
+                E7.Image = null;
+            }
+            else if (sayac == 30)// sayac 30'e eşit olduğunda aşağıdaki işlemler yapılacak
+            {
+                D5.Image = null;
+                E7.Image = pictureBox1.Image;
+                RENK();
+            }
+            else if (sayac == 42)// sayac 42'e eşit olduğunda aşağıdaki işlemler yapılacak
+            {
+                F7.Image = pictureBox1.Image;
+            }
+            else if (sayac == 55)// sayac 55'e eşit olduğunda aşağıdaki işlemler yapılacak
+            {
+                D8.BackColor = Color.Yellow;
+                H8.BackColor = Color.Yellow;
+                D6.BackColor = Color.Yellow;
+                H6.BackColor = Color.Yellow;
+                E5.BackColor = Color.Yellow;
+                G5.BackColor = Color.Yellow;
+            }
+            else if (sayac == 68)// sayac 68'e eşit olduğunda aşağıdaki işlemler yapılacak
+            {
+                F7.Image = null;
+                D8.Image = pictureBox1.Image;
+                RENK();
+
+            }
+
+
+            else if (sayac == 100)// sayac 100'e eşit olduğunda aşağıdaki işlemler yapılacak
+            {
+                timer1.Stop();
+                
+                D8.Image = null;
+            }
+            
+        }
+    }
+}

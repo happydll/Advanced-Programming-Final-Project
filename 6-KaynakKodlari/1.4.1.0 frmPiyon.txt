@@ -1,0 +1,52 @@
+using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+
+namespace WindowsFormsApp1
+{
+    public partial class frmPiyon : Form
+    {
+        public frmPiyon()
+        {
+            InitializeComponent();
+        }
+
+        private void cmdTaşlar_Click(object sender, EventArgs e)
+        {
+            {
+                frmTaşlar frmTaşlar = new frmTaşlar();
+                frmTaşlar.Show();
+                this.Hide(); //cmdTaşlar butonuna tıklandığında frmTaşlar sayfaını açan kod.
+
+                System.Media.SoundPlayer ses = new System.Media.SoundPlayer();
+                ses.SoundLocation = "ses.wav";
+                ses.Play(); //burada butona tıklandığında ses dosyasını oynatır.
+            }
+        }
+
+        private void cmdPiyonHareketi_Click(object sender, EventArgs e)
+        {
+            {
+                frmPiyonHareketi frmPiyonHareketi = new frmPiyonHareketi();
+                frmPiyonHareketi.Show();
+                this.Hide(); //cmdPiyonHareketi butonuna tıklandığında frmiyonHareketi sayfaını açan kod.
+
+                System.Media.SoundPlayer ses = new System.Media.SoundPlayer();
+                ses.SoundLocation = "ses.wav";
+                ses.Play(); //burada butona tıklandığında ses dosyasını oynatır.
+            }
+
+        }
+
+        private void frmPiyon_Load(object sender, EventArgs e)
+        {
+
+        }
+    }
+}

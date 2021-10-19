@@ -1,0 +1,87 @@
+using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+
+namespace WindowsFormsApp1
+{
+    public partial class frmÖğren : Form
+    {
+        public frmÖğren()
+        {
+            InitializeComponent();
+        }
+
+        private void Form3_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cmdGeri_Click(object sender, EventArgs e)
+        {
+            {
+                frmAnasayfa frmAnasayfa = new frmAnasayfa();
+                frmAnasayfa.Show();
+                this.Hide(); // cmdGeri butonuna tıklandığında frmAnasayfa sayfaını açan kod.
+
+                System.Media.SoundPlayer ses = new System.Media.SoundPlayer();
+                ses.SoundLocation = "ses.wav";
+                ses.Play(); //burada butona tıklandığında ses dosyasını oynatır.
+            }
+        }
+
+        private void picGenelBilgiler_Click(object sender, EventArgs e)
+        {
+            {
+                frmGenelBilgiler frmGenelBilgiler = new frmGenelBilgiler();
+                frmGenelBilgiler.Show();
+                this.Hide(); // picGenelBilgiler'e tıklandığında frmGenelBilgiler sayfaını açan kod.
+
+                System.Media.SoundPlayer ses = new System.Media.SoundPlayer();
+                ses.SoundLocation = "ses.wav";
+                ses.Play(); //burada butona tıklandığında ses dosyasını oynatır.
+            }
+        }
+
+        private void picSatrançTahrasıHakkında_Click(object sender, EventArgs e)
+        {
+            {
+                frmSatrançTahtasıHakkında frmSatrançTahtasıHakkında = new frmSatrançTahtasıHakkında();
+                frmSatrançTahtasıHakkında.Show();
+                this.Hide(); // picSatrançTahrasıHakkında'ya tıklandığında frmfrmSatrançTahtasıHakkında sayfaını açan kod.
+
+                System.Media.SoundPlayer ses = new System.Media.SoundPlayer();
+                ses.SoundLocation = "ses.wav";
+                ses.Play(); //burada butona tıklandığında ses dosyasını oynatır.
+            }
+        }
+
+        private void picTaşlar_Click(object sender, EventArgs e)
+        {
+            {
+                frmTaşlar frmTaşlar = new frmTaşlar();
+                frmTaşlar.Show();
+                this.Hide(); // picTaşlar resmine tıklandığında frmTaşlar sayfaını açan kod.
+
+                System.Media.SoundPlayer ses = new System.Media.SoundPlayer();
+                ses.SoundLocation = "ses.wav";
+                ses.Play(); //burada butona tıklandığında ses dosyasını oynatır.
+            }
+        }
+    }
+}

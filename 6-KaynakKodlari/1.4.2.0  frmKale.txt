@@ -1,0 +1,51 @@
+using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+
+namespace WindowsFormsApp1
+{
+    public partial class frmKale : Form
+    {
+        public frmKale()
+        {
+            InitializeComponent();
+        }
+
+        private void cmdTaşlar3_Click(object sender, EventArgs e)
+        {
+            {
+                frmTaşlar frmTaşlar = new frmTaşlar();
+                frmTaşlar.Show();
+                this.Hide(); //cmdTaşlar3 butonuna tıklandığında frmTaşlar sayfaını açan kod.
+
+                System.Media.SoundPlayer ses = new System.Media.SoundPlayer();
+                ses.SoundLocation = "ses.wav";
+                ses.Play(); //burada butona tıklandığında ses dosyasını oynatır.
+            }
+        }
+
+        private void cmdKaleHareketi_Click(object sender, EventArgs e)
+        {
+            {
+                frmKaleHareketi frmKaleHareketi = new frmKaleHareketi();
+                frmKaleHareketi.Show();
+                this.Hide(); //cmdKaleHareketi butonuna tıklandığında frmKaleHareketi sayfaını açan kod.
+
+                System.Media.SoundPlayer ses = new System.Media.SoundPlayer();
+                ses.SoundLocation = "ses.wav";
+                ses.Play(); //burada butona tıklandığında ses dosyasını oynatır.
+            }
+        }
+
+        private void frmKale_Load(object sender, EventArgs e)
+        {
+
+        }
+    }
+}
