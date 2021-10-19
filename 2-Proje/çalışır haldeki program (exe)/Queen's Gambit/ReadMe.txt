@@ -1,0 +1,1 @@
+Projeyi çalıştırmak için Queen's Gambit.exe isimli dosyayı çalıştırınız.
