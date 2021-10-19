@@ -1,1 +1,1 @@
-# 2. Sınıfta aldığım İleri Programlama dersinde grup olarak yaptığımız proje.
+# 2. Sınıfta aldığım İleri Programlama dersinde C# dilini kullanarak grup olarak yaptığımız proje.
